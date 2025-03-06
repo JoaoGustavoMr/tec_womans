@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tec Womans</title>
+</head>
+<body>
+    <nav>
+        <img src="img/image-removebg-preview (20).png" alt="">
+        <a href="#card1">Grace Hopper</a>
+        <a href="#card2">Ada Lovelace</a>
+        <a href="#card3">Margaret Hamilton</a>
+        <a href="#card4">Katherine Johnson</a>
+        <a href="#card5">Radia Perlman</a>
+        <a href="#card6">Sônia Guimarães</a>
+    </nav>
+    <div id="slogan-container">
+        <h1 id="slogan"></h1>
+    </div>
+    <div class="container">
+        <div class="card" id="card1">
+            <div class="card-image">
+                <img src="img/grace_hopper.webp" alt="Pessoa 1">
+            </div>
+            <div class="card-content">
+                <h3>Grace Hopper</h3>
+                <p>
+                    Grace Hopper (1906-1992) foi uma cientista da computação e almirante da Marinha dos EUA, pioneira no desenvolvimento da computação moderna. Criou a linguagem de programação COBOL, tornando o código mais acessível e próximo da linguagem humana. Formada em Matemática e Física por Yale, também desenvolveu um dos primeiros compiladores, facilitando a criação de softwares.
+                    </p>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <div class="card-image">
+                <img src="img/ada_lovelace.png" alt="Pessoa 2">
+            </div>
+            <div class="card-content">
+                <h3>Ada Lovelace</h3>
+                <p>Ada Lovelace (1815-1852) foi uma matemática inglesa e é considerada a primeira programadora da história. Trabalhou com Charles Babbage no desenvolvimento da Máquina Analítica, criando o primeiro algoritmo destinado a ser processado por uma máquina. Seus estudos visionários influenciaram a computação moderna.</p>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="card-image">
+                <img src="img/marg_hamilton.jpg" alt="Pessoa 3">
+            </div>
+            <div class="card-content">
+                <h3>Margaret Hamilton</h3>
+                <p>Margaret Hamilton, nascida em 1936 nos EUA, é uma engenheira de software que liderou a equipe responsável pelo sistema de controle de voo da Apollo 11, garantindo o pouso seguro na Lua. Formada em Matemática pela Universidade de Earlham, foi pioneira no desenvolvimento de software crítico para missões espaciais. Seu trabalho ajudou a estabelecer a engenharia de software como uma disciplina essencial para a computação moderna..</p>
+            </div>
+        </div>
+        <div class="card" id="card4">
+            <div class="card-image">
+                <img src="img/kat_johnson.jpg" alt="Pessoa 4">
+            </div>
+            <div class="card-content">
+                <h3>Katherine Johnson</h3>
+                <p>Katherine Johnson (1918-2020) foi uma matemática da NASA cujos cálculos foram cruciais para missões espaciais, incluindo a Apollo 11. Formada em Matemática pela Universidade Estadual da Virgínia Ocidental, desempenhou um papel fundamental na viabilização dos primeiros voos tripulados dos EUA. Sua trajetória inspiradora foi retratada no filme "Estrelas Além do Tempo".</p>
+            </div>
+        </div>
+        <div class="card" id="card5">
+            <div class="card-image">
+                <img src="img/radia_perlman.jpg" alt="Pessoa 5">
+            </div>
+            <div class="card-content">
+                <h3>Radia Perlman</h3>
+                <p>Radia Perlman, nascida em 1951 nos EUA, é uma cientista da computação conhecida como a "mãe da Internet". Ela desenvolveu o protocolo Spanning Tree (STP), fundamental para o funcionamento das redes Ethernet modernas. Formada em Ciência da Computação pelo MIT, suas contribuições foram cruciais para o desenvolvimento de redes seguras e escaláveis, impactando profundamente a infraestrutura da Internet.</p>
+            </div>
+        </div>
+        <div class="card" id="card6">
+            <div class="card-image">
+                <img src="img/sonia_guimaraes.jpg" alt="Pessoa 6">
+            </div>
+            <div class="card-content">
+                <h3>Sônia Guimarães</h3>
+                <p>Sônia Guimarães é uma física brasileira nascida em 1957, conhecida por ser a primeira mulher negra a se tornar professora titular no Instituto Tecnológico de Aeronáutica (ITA). Especialista em física aplicada e semicondutores, formou-se em Física pela UFSCar e obteve doutorado pela Universidade de Manchester. Além de suas contribuições científicas, é uma forte defensora da inclusão de negros e mulheres na ciência, atuando no combate ao racismo estrutural no meio acadêmico. Seu trabalho inspira novas gerações a ingressarem nas carreiras de exatas.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Tec Womans. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">LinkedIn João Gustavo</a> |
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">LinkedIn João Pedro</a> |
+            <a href="https://www.linkedin.com/in/murilo-henrique-de-souza-silva-0377322b7/" target="_blank">LinkedIn Murilo Silva</a>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+   window.onload = function() {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0);
+
+    const sloganText = "O Futuro da TI é feminino!";
+    let index = 0;
+    const sloganElement = document.getElementById('slogan');
+
+    sloganElement.style.borderRight = "2px solid black";
+
+    function typeSlogan() {
+        if (index < sloganText.length) {
+            sloganElement.textContent += sloganText[index];
+            index++;
+            setTimeout(typeSlogan, 100); 
+        } else {
+            setTimeout(() => {
+                sloganElement.style.borderRight = "none";
+            }, 500);
+        }
+    }
+
+    typeSlogan(); 
+
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const navbarHeight = document.querySelector("nav").offsetHeight; // Obtém altura da navbar
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - navbarHeight - 10; // Compensa o tamanho da navbar
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+};
+
+</script>
+
+
+
+
+
